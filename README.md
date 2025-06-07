@@ -3,10 +3,10 @@
 
 <div style="display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 300px; margin: 10px;">
-    <img src="Pasted image 20250607232637.png" alt="Random Date Search Interface" style="max-width: 100%; height: auto;">
+    <img src="https://github.com/user-attachments/assets/db753ada-6960-4ac9-98ec-c896443191ef" alt="Random Date Search Interface" style="max-width: 100%; height: auto;">
   </div>
   <div style="flex: 1; min-width: 300px; margin: 10px;">
-    <img src="Pasted image 20250607232705.png" alt="Another part of the UI or a different feature" style="max-width: 100%; height: auto;">
+    <img src="https://github.com/user-attachments/assets/d2d9b567-b8ab-41c4-9a76-1ea98a639055" alt="Another part of the UI or a different feature" style="max-width: 100%; height: auto;">
   </div>
 </div>
 
