@@ -1,0 +1,264 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    width: 400px;
+    padding: 15px;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h1 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    text-align: center;
+    margin: 0 0 10px 0;
+}
+
+/* Input Groups and Labels */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95em;
+}
+.input-group.vertical {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+    flex-shrink: 0;
+    min-width: 55px;
+    text-align: right;
+}
+.input-group.vertical label {
+    text-align: left;
+    min-width: auto;
+    margin-bottom: 2px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    flex-grow: 1;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9em;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+    width: 100%;
+}
+input[type="number"] {
+    max-width: 80px;
+    flex-grow: 0;
+    width: auto;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Settings Section */
+.settings-section {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 12px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.settings-section h2 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 0 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.date-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+/* Generated Date Range Display */
+.date-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.95em;
+    margin-top: 5px;
+    background-color: #e9ecef;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+.date-display label {
+    min-width: auto;
+    text-align: left;
+    white-space: nowrap;
+}
+
+#display-date-range {
+    font-weight: bold;
+    color: #0056b3;
+    white-space: nowrap;
+    text-align: center;
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#regenerate-dates {
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0 5px;
+    color: #555;
+    line-height: 1;
+    flex-shrink: 0;
+}
+#regenerate-dates:hover { color: #000; }
+
+.instructions {
+    font-size: 0.9em;
+    color: #666;
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* Button Grid for Search Types */
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+/* General Button Styles */
+button {
+    padding: 9px 10px;
+    font-size: 0.85em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+button:hover { opacity: 0.9; }
+button:active { transform: scale(0.98); }
+button:disabled { background-color: #bdc3c7; cursor: not-allowed; opacity: 0.7; }
+
+/* Secondary Button Style */
+.secondary-button {
+    background-color: #7f8c8d;
+    width: 100%;
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+.secondary-button:hover { background-color: #6c7a7b; }
+
+/* Specific button colors */
+#btn-google-youtube, #btn-google-normal, #btn-google-images,
+#btn-reddit, #btn-youtube-shorts, #btn-instagram, #btn-github, #btn-reddit-video,
+#btn-google-images-youtube, #btn-google-images-reddit, #btn-google-images-instagram,
+#btn-google-images-github, #btn-google-images-shorts, #btn-google-news, #btn-linkedin {
+     background-color: #4285F4;
+}
+
+#btn-youtube-relevance, #btn-youtube-views, #btn-open-youtube {
+    background-color: #FF0000;
+}
+#btn-reddit, #btn-reddit-video, #btn-google-images-reddit, #btn-open-reddit {
+    background-color: #FF4500;
+}
+#btn-instagram, #btn-google-images-instagram {
+     background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+#btn-github, #btn-google-images-github {
+    background-color: #333;
+}
+
+/* Group Open Buttons */
+.group-open-button {
+    margin-top: 8px;
+    width: 100%;
+    font-weight: bold;
+    box-sizing: border-box;
+    font-size: 0.9em;
+    display: block;
+}
+#btn-open-all { background-color: #16a085; }
+#btn-open-all:hover { background-color: #1abc9c; }
+#btn-open-youtube:hover { background-color: #cc0000; }
+#btn-open-reddit:hover { background-color: #cc3700; }
+#btn-open-images { background-color: #9b59b6; }
+#btn-open-images:hover { background-color: #8e44ad; }
+
+/* Preset Dates Section */
+.preset-dates {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 12px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.preset-dates h2 {
+    font-size: 1.1em;
+    color: #333;
+    margin: 0 0 5px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+}
+.preset-row {
+    display: flex;
+    gap: 6px;
+    justify-content: space-between;
+}
+.preset-button {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 6px 8px;
+    font-size: 0.8em;
+    background-color: #ecf0f1;
+    color: #34495e;
+    border: 1px solid #bdc3c7;
+}
+.preset-button:hover {
+    background-color: #dfe4e6;
+    border-color: #abb1b5;
+}
+
+/* Error Message */
+.error {
+    color: #e74c3c;
+    font-size: 0.9em;
+    text-align: center;
+    margin-top: 5px;
+    height: 1.2em;
+    font-weight: bold;
+}

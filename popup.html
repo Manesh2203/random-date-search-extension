@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Random Date Search</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Random Date Search</h1>
+
+        <div class="input-group">
+            <label for="keyword">Keyword:</label>
+            <input type="text" id="keyword" placeholder="Enter search keyword">
+        </div>
+
+        <!-- Date Settings Section (Manual Input) -->
+        <div class="settings-section">
+            <h2>Date Settings</h2>
+            <div class="date-inputs">
+                <div class="input-group">
+                    <label for="start-date">Start:</label>
+                    <input type="date" id="start-date">
+                </div>
+                <div class="input-group">
+                    <label for="end-date">End:</label>
+                    <input type="date" id="end-date">
+                </div>
+                <div class="input-group">
+                    <label for="days-gap">Gap (d):</label>
+                    <input type="number" id="days-gap" min="0" value="30" step="1" title="Number of days between random start and end (inclusive)">
+                </div>
+            </div>
+             <button id="reset-dates" class="secondary-button" title="Reset to 2015-01-01 - Today, Gap 30">Reset Manual Dates & Gap</button>
+        </div>
+
+        <!-- Preset Dates Section -->
+        <div class="preset-dates">
+            <h2>Preset Date Ranges</h2>
+            <div class="preset-row">
+                 <button id="btn-preset-3d" class="preset-button" title="Set range to the past 3 days (relative to today's date in the selected year)">Past 3 Days</button>
+                 <button id="btn-preset-7d" class="preset-button" title="Set range to the past 7 days (relative to today's date in the selected year)">Past 7 Days</button>
+                 <button id="btn-preset-14d" class="preset-button" title="Set range to the past 14 days (relative to today's date in the selected year)">Past 14 Days</button>
+                 <button id="btn-preset-30d" class="preset-button" title="Set range to the past 30 days (relative to today's date in the selected year)">Past 30 Days</button>
+            </div>
+             <div class="preset-row">
+                 <button id="btn-preset-1w-ago" class="preset-button" title="Set range to 7 days, starting 1 week ago (relative to today's date in the selected year)">1 Week Ago</button>
+            </div>
+            <div class="input-group vertical">
+                 <label for="select-past-day">Specific Past Day (ignores year selection):</label>
+                 <select id="select-past-day">
+                     <option value="">-- Select a Day --</option>
+                     <!-- Options populated by JS -->
+                 </select>
+            </div>
+            <div class="input-group vertical">
+                 <label for="select-preset-year">Specific Year (provides context for presets):</label>
+                 <select id="select-preset-year">
+                     <option value="">-- Select a Year --</option>
+                     <!-- Options populated by JS -->
+                 </select>
+            </div>
+        </div>
+
+        <!-- Generated/Selected Date Display -->
+        <div class="date-display">
+            <label>Active Range:</label>
+            <span id="display-date-range">-- --- ---- to -- --- ----</span>
+            <button id="regenerate-dates" title="Generate New Random Range (within Start/End inputs)">🔄</button>
+        </div>
+
+        <p class="instructions">Click a button to search with the Active Range:</p>
+
+        <!-- Search Type Buttons -->
+        <div class="button-grid">
+            <button id="btn-google-youtube">Google (YouTube Site)</button>
+            <button id="btn-google-normal">Google (Web)</button>
+            <button id="btn-google-images">Google (Images)</button>
+            <button id="btn-reddit">Reddit (Google)</button>
+            <button id="btn-youtube-shorts">Shorts (Google)</button>
+            <button id="btn-instagram">Reels (Google)</button>
+            <button id="btn-github">GitHub (Google)</button>
+            <button id="btn-google-news">Google (News)</button>
+
+            <button id="btn-youtube-relevance">YouTube (Relevance)</button>
+            <button id="btn-youtube-views">YouTube (Views)</button>
+            <button id="btn-google-images-youtube" title="Google Image Search site:youtube.com">Images (YouTube)</button>
+            <button id="btn-google-images-reddit" title="Google Image Search site:reddit.com/r/*/comments">Images (Reddit)</button>
+            <button id="btn-google-images-instagram" title="Google Image Search site:instagram.com/reel">Images (Reels)</button>
+            <button id="btn-google-images-github" title="Google Image Search site:github.com/*/*">Images (GitHub)</button>
+            <button id="btn-google-images-shorts" title="Google Image Search site:youtube.com/shorts">Images (Shorts)</button>
+            <button id="btn-reddit-video">Reddit Video (Google)</button>
+            <button id="btn-linkedin">LinkedIn Profile (G)</button>
+        </div>
+
+        <!-- Group Open Buttons -->
+        <button id="btn-open-all" class="group-open-button" title="Open ALL search types in a new window">Open All Searches</button>
+        <button id="btn-open-youtube" class="group-open-button" title="Open only YouTube related searches in a new window">Open YouTube Searches</button>
+        <button id="btn-open-reddit" class="group-open-button" title="Open only Reddit related searches in a new window">Open Reddit Searches</button>
+        <button id="btn-open-images" class="group-open-button" title="Open only Image related searches in a new window">Open Image Searches</button>
+
+        <div id="error-message" class="error"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
