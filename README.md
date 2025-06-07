@@ -1,4 +1,4 @@
-# Random Date Search Links V2
+# MultiSearch Dashboard (Random Date Search Extension)
 
 A powerful Chrome extension designed for researchers, journalists, content creators, and curious minds. This tool makes it easy to find web content, images, and videos from specific and often obscure date ranges across various platforms like Google, YouTube, and Reddit.
 
