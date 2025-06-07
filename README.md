@@ -1,9 +1,14 @@
 # MultiSearch Dashboard (Random Date Search Extension)
 
-![image](https://github.com/user-attachments/assets/085fff48-b1d9-43fa-ad8a-363a426fcba4)
-![image](https://github.com/user-attachments/assets/961f4e42-52ff-4bbd-97f7-d8fe2cfbe1de)
 
-A powerful Chrome extension designed for researchers, journalists, content creators, and curious minds. This tool makes it easy to find web content, images, and videos from specific and often obscure date ranges across various platforms like Google, YouTube, and Reddit.
+<div style="display: flex; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+  <div style="flex: 1; min-width: 300px; margin: 10px;">
+    <img src="Pasted image 20250607232637.png" alt="Random Date Search Interface" style="max-width: 100%; height: auto;">
+  </div>
+  <div style="flex: 1; min-width: 300px; margin: 10px;">
+    <img src="Pasted image 20250607232705.png" alt="Another part of the UI or a different feature" style="max-width: 100%; height: auto;">
+  </div>
+</div>
 
 ## The Problem It Solves
 
